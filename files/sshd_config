@@ -15,7 +15,7 @@ PermitRootLogin yes
 StrictModes yes
 RSAAuthentication yes
 PubkeyAuthentication yes
-AuthorizedKeysFile /etc/ssh/freighter/authorized_keys %h/.ssh/authorized_keys
+AuthorizedKeysFile /nitrous/ssh/authorized_keys %h/.ssh/authorized_keys
 IgnoreRhosts yes
 RhostsRSAAuthentication no
 HostbasedAuthentication no
