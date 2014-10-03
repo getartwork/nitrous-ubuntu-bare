@@ -13,4 +13,5 @@ ADD files/ssh_bootstrap.sh /etc/ssh/ssh_bootstrap.sh
 ADD files/ssh.conf /etc/init/ssh.conf
 ADD files/sshd_config /etc/ssh/sshd_config
 
-VOLUME ["/nitrous"]
+ENV NITROUS_IMAGE_VERSION 1
+
