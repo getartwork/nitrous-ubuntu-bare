@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ -n "$__HOST" ]; then
+  if ! grep -Fxq "$__HOST host" /etc/hosts; then
+    echo "$__HOST host" >> /etc/hosts
+  fi
+fi
+
 if [ ! -e /nitrous/.bootstrap_done ]; then
   # generate new host keys
   rm -rf /etc/ssh/ssh_host_*
