@@ -18,6 +18,7 @@ RUN \
 
 ADD files/nitrous_bootstrap.conf /etc/init/nitrous_bootstrap.conf
 ADD files/bootstrap.sh /nitrous/bootstrap.sh
+ADD files/dockerenv-inject /nitrous/dockerenv-inject
 ADD files/sshd_config /etc/ssh/sshd_config
 
 ENV NITROUS_IMAGE_VERSION 1
