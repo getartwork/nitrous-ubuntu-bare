@@ -16,6 +16,11 @@ RUN \
   mkdir -p /nitrous/init /nitrous/initonce && \
   touch /nitrous/dont_delete_this_dir
 
+RUN \
+  rm /etc/legal && \
+  rm /etc/update-motd.d/10-help-text
+
+ADD files/motd /etc/update-motd.d/00-header
 ADD files/nitrous_bootstrap.conf /etc/init/nitrous_bootstrap.conf
 ADD files/bootstrap.sh /nitrous/bootstrap.sh
 ADD files/dockerenv-inject /nitrous/dockerenv-inject
