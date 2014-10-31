@@ -26,6 +26,9 @@ ADD files/bootstrap.sh /nitrous/bootstrap.sh
 ADD files/dockerenv-inject /nitrous/dockerenv-inject
 ADD files/sshd_config /etc/ssh/sshd_config
 
+ADD files/nitrous-unison /nitrous/nitrous-unison
+ADD files/nitrous-watcher /nitrous/nitrous-watcher
+
 ADD files/init/0010-inject-env.sh  /nitrous/init/0010-inject-env.sh
 ADD files/init/0020-inject-host.sh /nitrous/init/0020-inject-host.sh
 
