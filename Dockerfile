@@ -34,7 +34,7 @@ ADD files/init/0020-inject-host.sh /nitrous/init/0020-inject-host.sh
 
 ADD files/initonce/0010-generate-pw.sh /nitrous/initonce/0010-generate-pw.sh
 
-ENV NITROUS_IMAGE_VERSION 1
+ENV NITROUS_IMAGE_VERSION 2
 ENV NITROUS_USERNAME action
 ENV NITROUS_SSH_ENABLED true
 
