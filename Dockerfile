@@ -30,7 +30,6 @@ ADD files/nitrous-unison /nitrous/nitrous-unison
 ADD files/nitrous-watcher /nitrous/nitrous-watcher
 
 ADD files/init/0010-inject-env.sh  /nitrous/init/0010-inject-env.sh
-ADD files/init/0020-inject-host.sh /nitrous/init/0020-inject-host.sh
 
 ADD files/initonce/0010-generate-pw.sh /nitrous/initonce/0010-generate-pw.sh
 
