@@ -3,11 +3,11 @@ This is the bare base Docker image for all Nitrous.IO ubuntu containers. The dif
 To run:
 
 ```
-docker build -t nitrousio/ubuntu-bare:trusty .
-docker run -i -t -d nitrousio/ubuntu-bare:trusty
+docker build -t nitrousio/ubuntu-bare:latest .
+docker run -i -t -d nitrousio/ubuntu-bare:latest
 docker logs <CID>
 docker ps <CID>
-ssh -p <port> action@<ip>
+ssh -p <port> nitrous@<ip>
 ```
 
 Enter the password `docker logs` command displays.
