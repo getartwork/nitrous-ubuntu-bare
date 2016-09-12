@@ -1,5 +1,5 @@
-FROM ubuntu-upstart:trusty
-MAINTAINER Nitrous.IO <hello@nitrous.io>
+FROM ubuntu:latest
+MAINTAINER Qian Qiao <qian.qiao@gmail.com>
 
 ENV NITROUS_IMAGE_VERSION 2
 ENV NITROUS_USERNAME nitrous
@@ -7,6 +7,12 @@ ENV NITROUS_SSH_ENABLED true
 
 # Disable root password
 RUN passwd -l root
+
+RUN \
+  apt-get update && \
+  apt-get -y dist-upgrade && \
+  apt-get install -yy --no-install-recommends sudo && \
+  apt-get clean
 
 # Create nitrous user and give sudo
 RUN \
