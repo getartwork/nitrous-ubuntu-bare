@@ -11,7 +11,7 @@ RUN passwd -l root
 RUN \
   apt-get update && \
   apt-get -y dist-upgrade && \
-  apt-get install -yy --no-install-recommends sudo && \
+  apt-get install -yy --no-install-recommends sudo openssh-server supervisor && \
   apt-get clean
 
 # Create nitrous user and give sudo
@@ -44,4 +44,6 @@ ADD files/init/0010-inject-env.sh  /nitrous/init/0010-inject-env.sh
 
 ADD files/initonce/0010-generate-pw.sh /nitrous/initonce/0010-generate-pw.sh
 
-CMD ["/sbin/init", "--default-console", "none"]
+ADD files/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+CMD ["/usr/bin/supervisord"]
