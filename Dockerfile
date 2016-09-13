@@ -11,7 +11,7 @@ RUN passwd -l root
 RUN \
   apt-get update && \
   apt-get -y dist-upgrade && \
-  apt-get install -yy --no-install-recommends sudo openssh-server supervisor && \
+  apt-get install -yy --no-install-recommends sudo openssh-server supervisor bash-completion ca-certificates && \
   apt-get clean
 
 # Create nitrous user and give sudo
